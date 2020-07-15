@@ -1,0 +1,8 @@
+{
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "workbench.editor.enablePreview": false,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontWeight": "400",
+  "editor.formatOnSave": true
+}
