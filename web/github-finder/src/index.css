@@ -4,8 +4,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,6 +15,7 @@ body {
 
 #root {
   height: 100vh;
+
   --primary: #e8505b;
   --secondary: #f9d56e;
   --terciary: #f3ecc2;
@@ -30,4 +31,9 @@ body {
 
   --black: #222;
   --blackest: #000;
+
+  --font-title: "Acme", "Roboto", sans-serif;
+  --post-title-font: "Grenze Gotisch", "Roboto", sans-serif;
+  --content-font: "Roboto", "Raleway", sans-serif;
+  --alternative-font: "Raleway", "Roboto";
 }

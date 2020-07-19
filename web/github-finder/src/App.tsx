@@ -1,8 +1,11 @@
-import React from 'react';
-import './App.css';
-import styled from 'styled-components';
+import React from "react";
+import "./App.css";
+import styled from "styled-components";
 
-import { Github } from '@styled-icons/fa-brands';
+import { MenuAlt2 as Menu } from "@styled-icons/heroicons-outline";
+
+import { Github } from "@styled-icons/fa-brands";
+import Users from "./components/users";
 
 const Navbar = styled.div`
   display: flex;
@@ -12,8 +15,14 @@ const Navbar = styled.div`
 
   height: 52px;
   color: #fff;
+  font-family: var(--alternative-font);
+
   background-color: var(--primary);
   padding: 0 15px;
+
+  p {
+    font-size: 12px;
+  }
 `;
 
 const Row = styled.div`
@@ -46,6 +55,14 @@ const GithubIcon = styled(Github)`
   color: var(--white);
 `;
 
+const MenuIcon = styled(Menu)`
+  height: 18px;
+  width: 18px;
+  margin-right: 6px;
+
+  color: var(--white);
+`;
+
 const HomeContainer = styled(RowContainer)`
   background-color: var(--white);
   color: var(--black);
@@ -72,35 +89,38 @@ const HomeContainer = styled(RowContainer)`
   }
 `;
 
-function App() {
+const Title = styled.span`
+  font-family: var(--font-title);
+`;
+
+const App = () => {
   return (
     <div className="App">
       <Navbar>
-        <div>
-          <h4>Menu</h4>
-        </div>
+        <Row>
+          <MenuIcon />
+          <p>Menu</p>
+        </Row>
 
         <Row>
           <GithubIcon />
-          <span>Github Finder</span>
+          <Title>Github Finder</Title>
         </Row>
 
-        <div>
-          <p>Menu direito</p>
+        <div className="right-menu">
+          <p>Sobre</p>
         </div>
       </Navbar>
 
       <HomeContainer>
-        <div className="sidebar">Opa</div>
+        <div className="sidebar"></div>
         <div className="content">
-          <div>
-            <p>Teste</p>
-          </div>
+          <Users />
         </div>
       </HomeContainer>
     </div>
   );
-}
+};
 
 export default App;
 export { RowContainer, ColumnContainer };
